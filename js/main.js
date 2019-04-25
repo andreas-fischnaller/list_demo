@@ -97,6 +97,10 @@ function clearTextarea(source)
 function go()
 {
     let textString = cpText.value; 
+    while (/[ ]/g.test(textString.charAt(textString.length-1)))
+    {
+        textString = textString.slice(0, textString.length-1);
+    }
     if (/[\.\:\!\?]/g.test(textString.charAt(textString.length-1)) == false) textString += `.`;    
     let annText = "";
     let url = dictionaries[lang].find(x => x.value === dictionary).url;
