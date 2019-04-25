@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>list</title>    
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body>
+    <div id="language_select">
+        <div id="languages">
+            
+        </div>
+    </div>
+    <div id="textbox" autofocus> 
+        <textarea class="cp_text" id="cp_text" onclick="clearTextarea('textarea');"></textarea>
+        <div id="dictionary_select">
+            <span id="dictionary"></span>
+            <br class="rb">
+        </div>        
+        <br>                 
+        <a class="btn" onclick="clearTextarea('button');" style="float: left;" id="clearTextarea"></a>        
+        <a class="btn" onclick="go();" style="float: right;" id="go"></a>
+    </div>
+    <div id="output"></div>
+    <div id="wordlist"></div>
+    <div id="wordlist_menu">
+        <a id="dl_json" onclick="downloadList('json');" class="btn">JSON</a> |
+        <a id="dl_html" onclick="downloadList('html');" class="btn">HTML</a> | 
+        <a id="dl_copy" onclick="downloadList('copy');" class="btn"></a> | 
+        <a id="print" onclick="downloadList('html', true);" class="btn"></a>
+    </div>  
+    <div id="fish" onclick="showLanguageSelect();">&#x1f41f;</div>
+    <script src="./js/labels.js" type="text/javascript"></script>
+    <script src="./js/dictionaries.js" type="text/javascript"></script>
+    <script src="./js/lang.js" type="text/javascript"></script>
+    <script src="./js/templates.js" type="text/javascript"></script>
+    <script src="./js/main.js" type="text/javascript"></script>    
+</body>
+</html>

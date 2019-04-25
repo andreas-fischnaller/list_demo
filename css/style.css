@@ -1,0 +1,203 @@
+@media screen and (min-width: 768px)
+{
+    .rb { display: none; }
+}
+
+html, body
+{
+    height: 95%;
+    margin: 0;
+    padding: 0; 
+    font-family: sans-serif;       
+}
+
+.btn, .btn:link, .btn:visited
+{
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: rgb(246, 246, 246);
+    border: 0px solid rgb(128, 128, 128);    
+    box-shadow: 0 0.1em 0.2em 0 rgba(0, 0, 0, 0.5);
+    border-radius: 0.25em;
+    padding-left: 0.25em;    
+    padding-right: 0.25em;    
+}
+
+.btn:hover
+{
+    background-color: rgb(144, 238, 144);
+}
+
+.btn:active
+{
+    background-color: rgb(128, 238, 128);
+    box-shadow: 0 0.1em 0.2em 0 rgba(0, 0, 0, 0.25);
+}
+
+.worditem
+{
+    border: 1px rgb(128, 128, 128) solid;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 0.1em 0.2em 0 rgba(0, 0, 0, 0.1);
+}
+
+.cp_text
+{
+    width: 100%;
+    height: 80%;
+    font-family: sans-serif;
+    font-size: 100%;
+    color: rgb(128, 128, 128);
+    resize: none;
+    margin: 0;
+    padding: 0;
+}
+
+.lex
+{
+    width: 100%;
+    height: 2.5em;    
+    font-size: 100%;
+    font-family: sans-serif;
+    color: rgb(0, 0, 0);
+    resize: none;
+    border: none;
+    background-color: rgb(246, 246, 246);
+    margin: 0;
+    padding: 0;
+}
+
+.trann
+{
+    width: 100%;
+    height: 3.5em;
+    font-family: sans-serif;
+    font-size: 75%;
+    color: rgb(128, 128, 128);
+    resize: none;
+    border: none;
+    background-color: rgb(246, 246, 246);
+    margin: 0;
+    padding: 0;
+}
+
+.example
+{
+    font-size: 75%;
+    font-family: serif;
+    font-style: italic;
+    background-color: rgb(246, 246, 246)
+}
+
+.emp
+{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.delbtn
+{
+    float: right;
+    cursor: pointer;
+    color: rgb(128, 128, 128);
+    padding-right: 0.5%;
+}
+
+.textlink:link
+{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+}
+
+.textlink:hover 
+{
+    color: rgb(0, 0, 0);
+    background-color: rgb(144, 238, 144);        
+}
+
+.textlink:active
+{
+    color: rgb(0, 0, 0);
+    background-color: rgb(128, 238, 128);        
+}
+
+.textlink:visited
+{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+
+#textbox
+{
+    height: 100%;
+    margin: 0;
+    padding: 1%;
+    text-align: center;    
+    font-size: 200%;
+}
+
+#output
+{
+    display: none;    
+    margin: 0;
+    padding: 1%;        
+    font-size: 200%;
+}
+
+#wordlist
+{
+    display: none;    
+    font-size: 200%;
+    padding: 1%;
+}
+
+#wordlist_menu
+{
+    display: none;
+    padding-bottom:2%;    
+    text-align: center; 
+    font-size: 200%;
+}
+
+#language_select
+{
+    position: fixed;
+    display: none;
+    width: 100%; 
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255,255,255,0.85); 
+    z-index: 2;    
+}
+
+#languages
+{    
+    font-size: 200%;
+    position: absolute;
+    top: 50%;
+    left: 50%;            
+    color: rgb(0, 0, 0);
+    transform: translate(-50%,-50%);
+}
+
+#languages > .btn
+{
+    width: 100%;
+    margin-bottom: 0.5em;    
+}
+
+#fish
+{
+    position: fixed;
+    right: 0;
+    bottom:0;    
+    text-align: right;   
+    z-index: 100; 
+    cursor: default;   
+}
