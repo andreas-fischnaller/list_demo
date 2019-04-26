@@ -254,3 +254,8 @@ label:active
     margin: auto; 
     height: 100%;
 }
+
+#dictionary_select
+{
+    margin-top: 1%;
+}
