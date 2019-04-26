@@ -19,11 +19,11 @@ let labels = {
         "clearTextarea": "Rensa",
         "go": "Starta",
         "print": "Skriv ut",
-        "copy": "$copy",
+        "copy": "Kopiera",
         "annotation": "anteckning(ar)",
         "translation": "översättning(ar)",
         "example": "exempel",
-        "textarea": "$textarea",
+        "textarea": "Klistra in texten här...",
         "exportFilename": "ordlista-",
         "JSONArrayName": "ordlista"
     }

@@ -112,12 +112,6 @@ html, body
     background-color: rgb(255, 255, 255);
 }
 
-.textlink:hover 
-{
-    color: rgb(0, 0, 0);
-    background-color: rgb(144, 238, 144);        
-}
-
 .textlink:active
 {
     color: rgb(0, 0, 0);
@@ -128,6 +122,12 @@ html, body
 {
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
+}
+
+.textlink:hover 
+{
+    color: rgb(0, 0, 0);
+    background-color: rgb(144, 238, 144);        
 }
 
 #textbox
