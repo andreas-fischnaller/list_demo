@@ -133,7 +133,7 @@ function go()
         let search = x.replace(/\<br\>|[\.\,\-\_\:\;\!\?\\\'\"\§\$\%\&\/\(\)\[\]\{\}\*\´\`\~\<\>\#]|[0-9]/gi, "");                
         if (directInput == false) searchString = "";
         else searchString = search;        
-        x = templates[lang].linkFormat(x, search, searchString, url, endString, example);
+        x = templates[lang].linkFormat(x, search, searchString, url, endString, example, i);
         return x;        
     });
     annText = links.join(" ");
@@ -142,7 +142,7 @@ function go()
     output.innerHTML = annText;                        
 }
 
-function addWord(word, example)
+function addWord(word, example, id)
 {    
     let word2 = "";  
     if (word.split(/ /g).length > 1) 
@@ -171,8 +171,9 @@ function addWord(word, example)
     let annotation = checkLabel(labels[lang].annotation);
     let wordItem = document.createElement("div");
     wordItem.setAttribute("id", itemId);    
-    wordItem.innerHTML = templates[lang].wordItem(itemId, word, word2, example, translation, annotation);            
-    wordlist.appendChild(wordItem);  
+    wordItem.innerHTML = templates[lang].wordItem(itemId, word, word2, example, translation, annotation, id);            
+    wordlist.appendChild(wordItem);
+    document.getElementById(itemId).scrollIntoView();
     let directInput = dictionaries[lang].find(x => x.value === dictionary).directInput;
     if (directInput == false)
     {
@@ -275,7 +276,7 @@ function checkLabel(label)
     return label;    
 }
 
-function drop(e, val, example)
+function drop(e, val, example, id)
 {
     e.preventDefault();
     let data = e.dataTransfer.getData("text");                
@@ -283,7 +284,7 @@ function drop(e, val, example)
     let url = dictionaries[lang].find(x => x.value === dictionary).url;
     let endString = dictionaries[lang].find(x => x.value === dictionary).endString;
     let directInput = dictionaries[lang].find(x => x.value === dictionary).directInput;        
-    addWord(data + ' ' + val, example);
+    addWord(data + ' ' + val, example, id);
     if (directInput == false)
     {
         url = "https://" + new URL(url).hostname;                
