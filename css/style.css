@@ -1,6 +1,20 @@
-@media screen and (min-width: 768px)
+@media only screen and (min-width: 600px)
 {
-    .rb { display: none; }
+    .rb {
+        display: none; 
+    }        
+}
+
+@media only screen and (max-width: 600px)
+{
+    #dictionary_select
+    {
+        text-align: left;
+    }
+    label
+    {
+        width: 100%;
+    }
 }
 
 html, body
@@ -152,6 +166,7 @@ html, body
     display: none;    
     font-size: 200%;
     padding: 1%;
+    width: 98%;
 }
 
 #wordlist_menu
@@ -160,6 +175,7 @@ html, body
     padding-bottom:2%;    
     text-align: center; 
     font-size: 200%;
+    width: 100%;
 }
 
 #language_select
@@ -200,4 +216,11 @@ html, body
     text-align: right;   
     z-index: 100; 
     cursor: default;   
+}
+
+#content
+{    
+    max-width: 768px;
+    margin: auto; 
+    height: 100%;
 }
