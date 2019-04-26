@@ -60,9 +60,9 @@ html, body
 
 .worditem
 {
-    border: 1px rgb(128, 128, 128) solid;
     margin: 0;
     padding: 0;
+    border: 1px rgb(128, 128, 128) solid;
     box-shadow: 0 0.1em 0.2em 0 rgba(0, 0, 0, 0.1);
 }
 
@@ -72,6 +72,8 @@ html, body
     font-family: sans-serif;
     font-size: 100%;
     color: rgb(128, 128, 128);
+    border: 1px rgb(128, 128, 128) solid;
+    box-shadow: 0 0.1em 0.2em 0 rgba(0, 0, 0, 0.1);
     resize: none;
     margin: 0;
     padding: 0;
