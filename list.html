@@ -25,10 +25,14 @@
         <div id="output"></div>
         <div id="wordlist"></div>
         <div id="wordlist_menu">
-            <a id="dl_json" onclick="downloadList('json');" class="btn">JSON</a> |
-            <a id="dl_html" onclick="downloadList('html');" class="btn">HTML</a> | 
-            <a id="dl_copy" onclick="downloadList('copy');" class="btn"></a> | 
-            <a id="print" onclick="downloadList('html', true);" class="btn"></a>
+            <p>
+                <a id="dl_copy" onclick="downloadList('copy');" class="btn"></a> 
+                <a id="print" onclick="downloadList('html', true);" class="btn"></a>
+            </p>
+            <p>
+                <a id="dl_json" onclick="downloadList('json');" class="btn">JSON</a>  
+                <a id="dl_html" onclick="downloadList('html');" class="btn">HTML</a>
+            </p>
         </div>          
     </div>
     <div id="fish" onclick="showLanguageSelect();">&#x1f41f;</div>

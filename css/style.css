@@ -1,29 +1,27 @@
-@media only screen and (min-width: 600px)
+@media only screen and (orientation: portrait), only screen and (max-width: 600px)
 {
-    .rb {
-        display: none; 
-    }
-    .cp_text
-    {
-        height: 75%;
-    }
-}
-
-@media only screen and (max-width: 600px)
-{
-    .cp_text
-    {
-        height: 50%;
-    }
     #dictionary_select
     {
         text-align: left;
     }
-    #dictionary_label
+    #fish
     {
-        display: block;
-        width: 100%;
+        font-size: 200%;
     }
+    body
+    {
+        font-size: 150%;
+    }
+    label
+    {        
+        padding: 1%;
+        display: block;
+    }
+}
+
+@media only screen and (orientation: landscape)
+{
+    
 }
 
 html, body
@@ -32,6 +30,16 @@ html, body
     margin: 0;
     padding: 0; 
     font-family: sans-serif;       
+}
+
+label
+{
+    border: 0.1em solid rgb(255, 255, 255);
+}
+
+label:active
+{
+    opacity: 0.85;
 }
 
 .btn, .btn:link, .btn:visited
@@ -69,6 +77,7 @@ html, body
 .cp_text
 {
     width: 100%;    
+    height: 75%;
     font-family: sans-serif;
     font-size: 100%;
     color: rgb(128, 128, 128);

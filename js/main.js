@@ -62,12 +62,12 @@ function createUI()
         {
             check = "";
         }
-        if (dictionaries[lang][i].directInput == false) style = `style="border:1px solid rgb(255, 255, 255); background-color: rgba(255, 0, 0, 0.25)"`;
-        else style = `style="border:1px solid rgb(255, 255, 255); background-color: rgba(0, 255, 0, 0.25)"`;
-        document.getElementById("dictionary_select").innerHTML += `
-        <span id="dictionary_label" ${style}><label>
-            <input type="radio" name="dictionary" value="${dictionaries[lang][i].value}" onclick="dictionary = this.value;"${check}/> ${dictionaries[lang][i].name} 
-        </label></span> `;
+        if (dictionaries[lang][i].directInput == false) style = `style="background-color: rgba(255, 0, 0, 0.25)"`;
+        else style = `style="background-color: rgba(0, 255, 0, 0.25)"`;
+        document.getElementById("dictionary_select").innerHTML += `        
+            <label ${style}>
+                <input type="radio" name="dictionary" value="${dictionaries[lang][i].value}" onclick="dictionary = this.value;"${check}/> ${dictionaries[lang][i].name} 
+            </label> `;
     }                    
 }
 
