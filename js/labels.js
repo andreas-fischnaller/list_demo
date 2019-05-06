@@ -13,6 +13,34 @@ let labels = {
         "exportFilename": "list-",
         "JSONArrayName": "list"
     },
+    "fo":
+    {
+        "dictionary": "Orðabók",
+        "clearTextarea": "$clearTextarea",
+        "go": "$go",
+        "print": "$print",
+        "copy": "$copy",
+        "annotation": "$annotation",
+        "translation": "$translation",
+        "example": "dømi",
+        "textarea": "$textarea",
+        "exportFilename": "$exportFilename",
+        "JSONArrayName": "$JSONArrayName"
+    },
+    "is":
+    {
+        "dictionary": "Orðabók",
+        "clearTextarea": "$clearTextarea",
+        "go": "$go",
+        "print": "$print",
+        "copy": "$copy",
+        "annotation": "$annotation",
+        "translation": "$translation",
+        "example": "dæmi",
+        "textarea": "$textarea",
+        "exportFilename": "$exportFilename",
+        "JSONArrayName": "$JSONArrayName"
+    },
     "se":
     {
         "dictionary": "Ordbok",
