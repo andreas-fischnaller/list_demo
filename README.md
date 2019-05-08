@@ -1,8 +1,8 @@
 # list
 ## Introduction
-**list** allows the user to paste a text from the clipboard and output an annotated text, in which the all the words are transformed into links, which
-1. adds the word to a list and
-2. directly opens the entry of the word in an online-dictionary*.
+**list** allows the user to paste a text from the clipboard and output an annotated text, in which the all the words are transformed into links. Klicking these links will
+1. add the word to a list and
+2. directly open the entry of the word in an online-dictionary*.
 
 (* if this behaviour is allowed by the dictionary, cfr. below)
 
