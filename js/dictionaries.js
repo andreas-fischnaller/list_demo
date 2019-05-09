@@ -29,8 +29,8 @@ let dictionaries= {
         {
             "name": "Islex",
             "value": "islex",
-            "url": "http://islex.hi.is/islex?dict=DA&samleit=",
-            "endString": "&erflokin=1&nlo=1&nlj=1&nlt=1&fuzz=1&mal=DA&mal=NO&mal=NN&mal=SE&mal=FO&mal=FI",
+            "url": "http://islex.hi.is/",
+            "endString": "",
             "directInput": false,
             "standard": true
         },
