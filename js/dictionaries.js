@@ -21,7 +21,7 @@ let dictionaries= {
             "value": "svenska",
             "url": "https://svenska.se/",
             "endString": "",
-            "directInput": false,
+            "directInput": true,
             "standard": false
         }
     ],
