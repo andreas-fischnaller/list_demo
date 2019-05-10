@@ -7,11 +7,11 @@ let templates = {
                         target="_blank" 
                         class="textlink" 
                         onclick="addWord('${search}','${example}', ${i}); this.style.color = 'rgb(64, 64, 64)'; this.style.backgroundColor = 'rgb(246, 246, 246)';"
-                        ondrop="drop(event,'${search.toLowerCase()}', '${example}', ${i}); this.style.color = 'rgb(64, 64, 64)'; this.style.backgroundColor = 'rgb(246, 246, 246)';"
+                        ondrop="drop(event, '${search}', '${example}', ${i}); this.style.color = 'rgb(64, 64, 64)'; this.style.backgroundColor = 'rgb(246, 246, 246)';"
                         ondrag="this.style.color = 'rgb(64, 64, 64)'; this.style.backgroundColor = 'rgb(246, 246, 246)';"
                         ondragover="allowDrop(event); this.style.backgroundColor = 'rgb(144, 238, 144)';"
                         ondragleave="this.style.backgroundColor = 'rgb(256, 256, 256)';"                    
-                        ondragstart="drag(event, '${search.toLowerCase()}');" 
+                        ondragstart="drag(event, '${search}');" 
                         draggable="true"
                         >${x}</a>`;
     
@@ -47,11 +47,11 @@ let templates = {
                         target="_blank" 
                         class="textlink" 
                         onclick="addWord('${search}','${example}', '${i}'); this.style.color = 'rgb(64, 64, 64)'; this.style.backgroundColor = 'rgb(246, 246, 246)';"
-                        ondrop="drop(event,'${search.toLowerCase()}', '${example}', '${i}'); this.style.color = 'rgb(64, 64, 64)'; this.style.backgroundColor = 'rgb(246, 246, 246)';"
+                        ondrop="drop(event, '${search}', '${example}', '${i}'); this.style.color = 'rgb(64, 64, 64)'; this.style.backgroundColor = 'rgb(246, 246, 246)';"
                         ondrag="this.style.color = 'rgb(64, 64, 64)'; this.style.backgroundColor = 'rgb(246, 246, 246)';"
                         ondragover="allowDrop(event); this.style.backgroundColor = 'rgb(144, 238, 144)';"
                         ondragleave="this.style.backgroundColor = 'rgb(256, 256, 256)';"                    
-                        ondragstart="drag(event, '${search.toLowerCase()}');" 
+                        ondragstart="drag(event, '${search}');" 
                         draggable="true"
                         >${x}</a>`;
     
@@ -87,11 +87,11 @@ let templates = {
                         target="_blank" 
                         class="textlink" 
                         onclick="addWord('${search}','${example}', '${i}'); this.style.color = 'rgb(64, 64, 64)'; this.style.backgroundColor = 'rgb(246, 246, 246)';"
-                        ondrop="drop(event,'${search.toLowerCase()}', '${example}', '${i}'); this.style.color = 'rgb(64, 64, 64)'; this.style.backgroundColor = 'rgb(246, 246, 246)';"
+                        ondrop="drop(event, '${search}', '${example}', '${i}'); this.style.color = 'rgb(64, 64, 64)'; this.style.backgroundColor = 'rgb(246, 246, 246)';"
                         ondrag="this.style.color = 'rgb(64, 64, 64)'; this.style.backgroundColor = 'rgb(246, 246, 246)';"
                         ondragover="allowDrop(event); this.style.backgroundColor = 'rgb(144, 238, 144)';"
                         ondragleave="this.style.backgroundColor = 'rgb(256, 256, 256)';"                    
-                        ondragstart="drag(event, '${search.toLowerCase()}');" 
+                        ondragstart="drag(event, '${search}');" 
                         draggable="true"
                         >${x}</a>`;
     
