@@ -31,7 +31,7 @@ let dictionaries= {
             "value": "islex",
             "url": "http://islex.hi.is/",
             "endString": "",
-            "directInput": false,
+            "directInput": true,
             "standard": true
         },
         {
@@ -39,7 +39,7 @@ let dictionaries= {
             "value": "bin",
             "url": "http://bin.arnastofnun.is/leit/?q=",
             "endString": "&ordmyndir=on",
-            "directInput": false,
+            "directInput": true,
             "standard": false
         },
         {
@@ -47,7 +47,7 @@ let dictionaries= {
             "value": "mal",
             "url": "http://www.málið.is/leit/",
             "endString": "",
-            "directInput": false,
+            "directInput": true,
             "standard": false
         }
     ],
