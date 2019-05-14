@@ -19,8 +19,8 @@ let dictionaries= {
         {
             "name": "svenska.se",
             "value": "svenska",
-            "url": "https://svenska.se/",
-            "endString": "",
+            "url": "https://svenska.se/tre/?sok=",
+            "endString": "&pz=1",
             "directInput": true,
             "standard": false
         }
