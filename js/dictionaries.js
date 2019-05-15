@@ -86,9 +86,9 @@ let dictionaries= {
         {
             "name": "ordbok.uib.no",
             "value": "uib",
-            "url": "https://ordbok.uib.no/perl/ordbok.cgi?OPP=",
-            "endString": "&ant_bokmaal=5&ant_nynorsk=5&begge=+&ordbok=begge",
-            "directInput": false,
+            "url": "https://ordbok.uib.no/",
+            "endString": "",
+            "directInput": true,
             "standard": true
         }
     ]
