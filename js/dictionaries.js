@@ -25,6 +25,27 @@ let dictionaries= {
             "standard": false
         }
     ],
+    "dk": [
+        {
+            "name": "DDO",
+            "value": "ddo",
+            "url": "https://ordnet.dk/ddo/ordbog?query=",
+            "endString": "",
+            "directInput": false,
+            "standard": true
+        },
+        {
+            "name": "ODS",
+            "value": "ods",
+            "url": "https://ordnet.dk/ods/ordbog?query=",
+            "endString": "",
+            "directInput": false,
+            "standard": false
+        }
+    ],
+    /*"en": [
+
+    ],*/
     "is": [
         {
             "name": "Islex",
@@ -57,6 +78,16 @@ let dictionaries= {
             "value": "sprotin",
             "url": "https://sprotin.fo/?p=dictionaries&_l=en&_DictionaryId=1&_SearchDescriptions=0&_SearchInflections=1&_DictionaryPage=1&_SearchFor=",
             "endString": "",
+            "directInput": false,
+            "standard": true
+        }
+    ],
+    "no": [
+        {
+            "name": "ordbok.uib.no",
+            "value": "uib",
+            "url": "https://ordbok.uib.no/perl/ordbok.cgi?OPP=",
+            "endString": "&ant_bokmaal=5&ant_nynorsk=5&begge=+&ordbok=begge",
             "directInput": false,
             "standard": true
         }

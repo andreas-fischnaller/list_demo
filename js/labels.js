@@ -1,4 +1,18 @@
 let labels = {    
+    "dk":
+    {
+        "dictionary": "Ordbog",
+        "clearTextarea": "$clearTextarea",
+        "go": "Starte",
+        "print": "$print", 
+        "copy": "$copy",
+        "annotation": "antegning(er)",
+        "translation": "oversættelse(r)",
+        "example": "eksempel",
+        "textarea": "$textarea",
+        "exportFilename": "ordliste-",
+        "JSONArrayName": "ordliste"
+    },
     "en":
     {
         "dictionary": "Dictionary",
@@ -41,6 +55,20 @@ let labels = {
         "exportFilename": "$exportFilename",
         "JSONArrayName": "$JSONArrayName"
     },
+    "no":
+    {
+        "dictionary": "Ordbok",
+        "clearTextarea": "$clearTextarea",
+        "go": "$go",
+        "print": "$print",
+        "copy": "$copy",
+        "annotation": "$annotation",
+        "translation": "oversettelse(r)",
+        "example": "eksempel",
+        "textarea": "$textarea",
+        "exportFilename": "ordliste-",
+        "JSONArrayName": "ordliste"
+    },
     "se":
     {
         "dictionary": "Ordbok",
@@ -56,3 +84,22 @@ let labels = {
         "JSONArrayName": "ordlista"
     }
 }
+
+/* Pattern for new language:
+
+"language":
+    {
+        "dictionary": "$dictionary",
+        "clearTextarea": "$clearTextarea",
+        "go": "$go",
+        "print": "$print",
+        "copy": "$copy",
+        "annotation": "$annotation",
+        "translation": "$translation",
+        "example": "$example",
+        "textarea": "$textarea",
+        "exportFilename": "$exportFilename",
+        "JSONArrayName": "$JSONArrayName"
+    }
+
+*/

@@ -1,11 +1,18 @@
-let languages = [    
+let languages = [
     {
-        "value": "se",
-        "name": "Swedish",
-        "title": "Svenska",
+        "value": "dk",
+        "name": "Danish",
+        "title": "Dansk",
         "ddPattern": " ",
-        "img": "sv.png"
+        "img": "dk.png"
     },
+    /*{
+        "value": "en",
+        "name": "English",
+        "title": "English",
+        "ddPattern": " ",
+        "img": "en.png"
+    },*/
     {
         "value": "fo",
         "name": "Faroese",
@@ -19,5 +26,19 @@ let languages = [
         "title": "Íslenska",
         "ddPattern": " ",
         "img": "is.png"
+    },
+    {
+        "value": "no",
+        "name": "Norwegian",
+        "title": "Norsk",
+        "ddPattern": " ",
+        "img": "no.png"
+    },
+    {
+        "value": "se",
+        "name": "Swedish",
+        "title": "Svenska",
+        "ddPattern": " ",
+        "img": "sv.png"
     }
 ]

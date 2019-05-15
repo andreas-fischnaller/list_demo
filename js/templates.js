@@ -1,13 +1,54 @@
 let templates = {
     "se": {
+    linkFormat: (x, search, searchString, url, endString, example, i) => {                                        
+                x =`<a 
+                    id="${i}"
+                    href="${url}${searchString.toLowerCase()}${endString}"
+                    target="_blank" 
+                    class="textlink" 
+                    onclick="addWord('${search}', '${example}', ${i}); this.style.color = 'rgb(64, 64, 64)'; this.style.backgroundColor = 'rgb(246, 246, 246)';"
+                    ondrop="drop(event, '${search}', '${example}', ${i}); this.style.color = 'rgb(64, 64, 64)'; this.style.backgroundColor = 'rgb(246, 246, 246)';"
+                    ondrag="this.style.color = 'rgb(64, 64, 64)'; this.style.backgroundColor = 'rgb(246, 246, 246)';"
+                    ondragover="allowDrop(event); this.style.backgroundColor = 'rgb(144, 238, 144)';"
+                    ondragleave="this.style.backgroundColor = 'rgb(256, 256, 256)';"                    
+                    ondragstart="drag(event, '${search}');" 
+                    draggable="true"
+                    >${x}</a>`;
+
+                    return x;
+                },
+                
+    wordItem: (itemId, word, word2, example, translation, annotation, id) => {
+                x = `<div class="worditem" id="${itemId}">
+                        <span class="backbtn" onclick="document.getElementById('${id}').scrollIntoView();">^</span>
+                        <span class="delbtn" onclick="removeWord('${itemId}')">&#10005;</span>
+                        <p>
+                            <textarea id="lex${itemId}" onfocus="clearTextarea(this.id);" class="lex">${word.toLowerCase()}${word2}</textarea>
+                        </p>            
+                        <p contenteditable="true" class="example" id="exp${itemId}">
+                            ${example}
+                        </p>
+                        <p>
+                            <textarea  id="trans${itemId}" onfocus="clearTextarea(this.id);" class="trann">${translation}</textarea>
+                        </p>        
+                        <p>
+                            <textarea id="ann${itemId}" onfocus="clearTextarea(this.id);" class="trann">${annotation}</textarea>
+                        </p>
+                    </div> 
+                    <br>`;
+                return x;
+                }
+    },
+
+    "dk": {
         linkFormat: (x, search, searchString, url, endString, example, i) => {                                        
-                    x =`<a 
-                        id="${i}"
+                    x =`<a
+                        id="${i}" 
                         href="${url}${searchString.toLowerCase()}${endString}"
                         target="_blank" 
                         class="textlink" 
-                        onclick="addWord('${search}','${example}', ${i}); this.style.color = 'rgb(64, 64, 64)'; this.style.backgroundColor = 'rgb(246, 246, 246)';"
-                        ondrop="drop(event, '${search}', '${example}', ${i}); this.style.color = 'rgb(64, 64, 64)'; this.style.backgroundColor = 'rgb(246, 246, 246)';"
+                        onclick="addWord('${search}','${example}', '${i}'); this.style.color = 'rgb(64, 64, 64)'; this.style.backgroundColor = 'rgb(246, 246, 246)';"
+                        ondrop="drop(event, '${search}', '${example}', '${i}'); this.style.color = 'rgb(64, 64, 64)'; this.style.backgroundColor = 'rgb(246, 246, 246)';"
                         ondrag="this.style.color = 'rgb(64, 64, 64)'; this.style.backgroundColor = 'rgb(246, 246, 246)';"
                         ondragover="allowDrop(event); this.style.backgroundColor = 'rgb(144, 238, 144)';"
                         ondragleave="this.style.backgroundColor = 'rgb(256, 256, 256)';"                    
@@ -16,8 +57,8 @@ let templates = {
                         >${x}</a>`;
     
                         return x;
-                    },
-                    
+                },
+
         wordItem: (itemId, word, word2, example, translation, annotation, id) => {
                     x = `<div class="worditem" id="${itemId}">
                             <span class="backbtn" onclick="document.getElementById('${id}').scrollIntoView();">^</span>
@@ -37,8 +78,9 @@ let templates = {
                         </div> 
                         <br>`;
                     return x;
-                    }
+                }
     },
+
     "fo": {
         linkFormat: (x, search, searchString, url, endString, example, i) => {                                        
                     x =`<a 
@@ -119,7 +161,47 @@ let templates = {
                     return x;
                 }
     },
+
+    "no": {
+        linkFormat: (x, search, searchString, url, endString, example, i) => {                                        
+                    x =`<a
+                        id="${i}" 
+                        href="${url}${searchString.toLowerCase()}${endString}"
+                        target="_blank" 
+                        class="textlink" 
+                        onclick="addWord('${search}','${example}', '${i}'); this.style.color = 'rgb(64, 64, 64)'; this.style.backgroundColor = 'rgb(246, 246, 246)';"
+                        ondrop="drop(event, '${search}', '${example}', '${i}'); this.style.color = 'rgb(64, 64, 64)'; this.style.backgroundColor = 'rgb(246, 246, 246)';"
+                        ondrag="this.style.color = 'rgb(64, 64, 64)'; this.style.backgroundColor = 'rgb(246, 246, 246)';"
+                        ondragover="allowDrop(event); this.style.backgroundColor = 'rgb(144, 238, 144)';"
+                        ondragleave="this.style.backgroundColor = 'rgb(256, 256, 256)';"                    
+                        ondragstart="drag(event, '${search}');" 
+                        draggable="true"
+                        >${x}</a>`;
     
+                        return x;
+                    },
+
+        wordItem: (itemId, word, word2, example, translation, annotation, id) => {
+                    x = `<div class="worditem" id="${itemId}">
+                            <span class="backbtn" onclick="document.getElementById('${id}').scrollIntoView();">^</span>
+                            <span class="delbtn" onclick="removeWord('${itemId}')">&#10005;</span>
+                            <p>
+                                <textarea id="lex${itemId}" onfocus="clearTextarea(this.id);" class="lex">${word.toLowerCase()}${word2}</textarea>
+                            </p>            
+                            <p contenteditable="true" class="example" id="exp${itemId}">
+                                ${example}
+                            </p>
+                            <p>
+                                <textarea  id="trans${itemId}" onfocus="clearTextarea(this.id);" class="trann">${translation}</textarea>
+                            </p>        
+                            <p>
+                                <textarea id="ann${itemId}" onfocus="clearTextarea(this.id);" class="trann">${annotation}</textarea>
+                            </p>
+                        </div> 
+                        <br>`;
+                    return x;
+                }
+    },      
     "global": {
     exportHTMLStart: (exportFilename) => {
                 x = `<!DOCTYPE html>
