@@ -31,7 +31,7 @@ let dictionaries= {
             "value": "ddo",
             "url": "https://ordnet.dk/ddo/ordbog?query=",
             "endString": "",
-            "directInput": false,
+            "directInput": true,
             "standard": true
         },
         {
@@ -39,7 +39,7 @@ let dictionaries= {
             "value": "ods",
             "url": "https://ordnet.dk/ods/ordbog?query=",
             "endString": "",
-            "directInput": false,
+            "directInput": true,
             "standard": false
         }
     ],
