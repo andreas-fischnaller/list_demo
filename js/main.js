@@ -49,8 +49,9 @@ function createUI()
     document.getElementById("print").innerHTML = checkLabel(labels[lang].print);
     document.getElementById("dl_copy").innerHTML = checkLabel(labels[lang].copy);
     cpText.value = checkLabel(labels[lang].textarea);
-    let check, style = "";
-    dictionaries[lang].sort((a,b) => (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0));
+    let check, style = "";    
+    dictionaries[lang].push({"name": "Wiktionary","value": "wiki","url": "https://"+lang+".wiktionary.org/wiki/","endString": "","directInput": true,"standard": false});    
+    dictionaries[lang].sort((a,b) => (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : ((b.name.toLowerCase() > a.name.toLowerCase()) ? -1 : 0));
     for (let i = 0; i < dictionaries[lang].length; i++)
     {
         if (dictionaries[lang][i].standard == true) 
@@ -62,12 +63,14 @@ function createUI()
         {
             check = "";
         }
-        if (dictionaries[lang][i].directInput == false) style = `style="background-color: rgba(255, 0, 0, 0.25)"`;
-        else style = `style="background-color: rgba(0, 255, 0, 0.25)"`;
+        if (dictionaries[lang][i].directInput == false) style = `style="background-color: rgba(255, 0, 0, 0.25);"`;
+        else style = `style="background-color: rgba(0, 255, 0, 0.25);padding:0;"`;        
         document.getElementById("dictionary_select").innerHTML += `        
-            <label ${style}>
-                <input type="radio" name="dictionary" value="${dictionaries[lang][i].value}" onclick="dictionary = this.value;"${check}/> ${dictionaries[lang][i].name} 
-            </label> `;
+            <span style="white-space: nowrap;">    
+                <label ${style}>
+                    <input type="radio" name="dictionary" value="${dictionaries[lang][i].value}" onclick="dictionary = this.value;"${check}/> ${dictionaries[lang][i].name} 
+                </label> 
+            </span>`;
     }                    
 }
 

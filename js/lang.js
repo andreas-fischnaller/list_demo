@@ -7,7 +7,7 @@ let languages = [
         "img": "de.png"
     },
     {
-        "value": "dk",
+        "value": "da",
         "name": "Danish",
         "title": "Dansk",
         "ddPattern": " ",
@@ -42,7 +42,7 @@ let languages = [
         "img": "no.png"
     },
     {
-        "value": "se",
+        "value": "sv",
         "name": "Swedish",
         "title": "Svenska",
         "ddPattern": " ",

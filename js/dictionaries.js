@@ -1,5 +1,5 @@
 let dictionaries= {
-    "se": [
+    "sv": [
         {
             "name": "Lexin",
             "value": "lexin",
@@ -51,7 +51,7 @@ let dictionaries= {
             "standard": true
         }
     ],
-    "dk": [
+    "da": [
         {
             "name": "DDO",
             "value": "ddo",
@@ -116,6 +116,14 @@ let dictionaries= {
             "endString": "",
             "directInput": true,
             "standard": true
+        },
+        {
+            "name": "Wiktionary (Nynorsk)",
+            "value": "wiki_nn",
+            "url": "https://nn.wiktionary.org/wiki/",
+            "endString": "",
+            "directInput": true,
+            "standard": false
         }
     ]
 }

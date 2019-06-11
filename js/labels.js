@@ -13,7 +13,7 @@ let labels = {
         "exportFilename": "liste-",
         "JSONArrayName": "liste"
     },
-    "dk":
+    "da":
     {
         "dictionary": "Ordbog",
         "clearTextarea": "$clearTextarea",
@@ -83,7 +83,7 @@ let labels = {
         "exportFilename": "ordliste-",
         "JSONArrayName": "ordliste"
     },
-    "se":
+    "sv":
     {
         "dictionary": "Ordbok",
         "clearTextarea": "Rensa",
