@@ -1,4 +1,18 @@
 let labels = {    
+    "de":
+    {
+        "dictionary": "Wörterbuch",
+        "clearTextarea": "Text löschen",
+        "go": "Start",
+        "print": "Drucken",
+        "copy": "Kopieren",
+        "annotation": "Anmerkung(en)",
+        "translation": "Übersetzung(en)",
+        "example": "Beispiel",
+        "textarea": "Text hier einfügen...",
+        "exportFilename": "liste-",
+        "JSONArrayName": "liste"
+    },
     "dk":
     {
         "dictionary": "Ordbog",
