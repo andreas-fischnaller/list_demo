@@ -1,5 +1,12 @@
 let languages = [
     {
+        "value": "de",
+        "name": "German",
+        "title": "Deutsch",
+        "ddPattern": "",
+        "img": "de.png"
+    },
+    {
         "value": "dk",
         "name": "Danish",
         "title": "Dansk",

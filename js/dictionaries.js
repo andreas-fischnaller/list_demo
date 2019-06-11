@@ -25,6 +25,32 @@ let dictionaries= {
             "standard": false
         }
     ],
+    "de": [
+        {
+            "name": "leo.org",
+            "value": "leo",
+            "url": "https://leo.org/englisch-deutsch/",
+            "endString": "",
+            "directInput": false,
+            "standard": false
+        },
+        {
+            "name": "duden.de",
+            "value": "duden",
+            "url": "https://www.duden.de/suchen/dudenonline/",
+            "endString": "",
+            "directInput": false,
+            "standard": false
+        },
+        {
+            "name": "dwds.de",
+            "value": "dwds",
+            "url": "https://www.dwds.de/?q=",
+            "endString": "",
+            "directInput": false,
+            "standard": true
+        }
+    ],
     "dk": [
         {
             "name": "DDO",
