@@ -29,9 +29,9 @@ let dictionaries= {
         {
             "name": "leo.org",
             "value": "leo",
-            "url": "https://leo.org/englisch-deutsch/",
+            "url": "https://dict.leo.org/englisch-deutsch/",
             "endString": "",
-            "directInput": false,
+            "directInput": true,
             "standard": false
         },
         {
