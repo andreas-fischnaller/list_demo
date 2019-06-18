@@ -47,7 +47,7 @@ let dictionaries= {
             "value": "dwds",
             "url": "https://www.dwds.de/?q=",
             "endString": "",
-            "directInput": false,
+            "directInput": true,
             "standard": true
         }
     ],
