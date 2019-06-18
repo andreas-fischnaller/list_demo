@@ -144,7 +144,7 @@ function go()
     output.style.display = "block";
     output.innerHTML = annText;     
     // Islex-fix:
-    if (dictionary == "islex")                   
+    if (dictionary == "islex" && directInput == true)                   
     {
         let form = document.createElement("form");
         form.setAttribute("method", "POST");
@@ -203,7 +203,7 @@ function addWord(word, example, id)
         document.execCommand("copy");            
     }
     // Islex-fix:
-    if (dictionary == "islex")
+    if (dictionary == "islex" && directInput == true)
     {
         document.getElementById("searchString").value = word;
         document.getElementById("form").submit();
