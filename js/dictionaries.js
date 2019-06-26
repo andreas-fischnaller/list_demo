@@ -39,7 +39,7 @@ let dictionaries= {
             "value": "duden",
             "url": "https://www.duden.de/suchen/dudenonline/",
             "endString": "",
-            "directInput": false,
+            "directInput": true,
             "standard": false
         },
         {
