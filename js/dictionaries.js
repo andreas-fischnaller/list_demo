@@ -53,7 +53,7 @@ let dictionaries= {
     ],
     "da": [
         {
-            "name": "DDO",
+            "name": "Den Danske Ordbog",
             "value": "ddo",
             "url": "https://ordnet.dk/ddo/ordbog?query=",
             "endString": "",
@@ -61,7 +61,7 @@ let dictionaries= {
             "standard": true
         },
         {
-            "name": "ODS",
+            "name": "Ordbog over det danske Sprog",
             "value": "ods",
             "url": "https://ordnet.dk/ods/ordbog?query=",
             "endString": "",
