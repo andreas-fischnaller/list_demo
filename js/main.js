@@ -289,6 +289,10 @@ function downloadList(type, print)
             let exp = document.getElementById("exp"+x).innerHTML.replace(/[\n\t\r]| {2}|/g, "");
             let trans = document.getElementById("trans"+x).innerHTML;
             let ann = document.getElementById("ann"+x).innerHTML;
+            if (lex.slice(-4) == "<br>") lex = lex.slice(0, -4);
+            if (exp.slice(-4) == "<br>") exp = exp.slice(0, -4);
+            if (trans.slice(-4) == "<br>") trans = trans.slice(0, -4);
+            if (ann.slice(-4) == "<br>") ann = ann.slice(0, -4);
             copyString += templates["global"].exportHTML(lex, exp, trans, ann);                    
             return x;
         });
@@ -313,6 +317,10 @@ function downloadList(type, print)
             let exp = document.getElementById("exp"+x).innerHTML.replace(/[\n\t\r]| {2}| class=\"emp\"/g, "");
             let trans = document.getElementById("trans"+x).innerHTML;
             let ann = document.getElementById("ann"+x).innerHTML;
+            if (lex.slice(-4) == "<br>") lex = lex.slice(0, -4);
+            if (exp.slice(-4) == "<br>") exp = exp.slice(0, -4);
+            if (trans.slice(-4) == "<br>") trans = trans.slice(0, -4);
+            if (ann.slice(-4) == "<br>") ann = ann.slice(0, -4);
             copyString += templates["global"].exportJSON(lex, exp, trans, ann);
             return x; 
         });
@@ -327,8 +335,11 @@ function downloadList(type, print)
             let lex = document.getElementById("lex"+x).innerHTML;
             let exp = document.getElementById("exp"+x).innerHTML.replace(/[\n\t\r]| {2}|<em class=\"emp\">|<\/em>/g, "");
             let trans = document.getElementById("trans"+x).innerHTML;
-            let ann = document.getElementById("ann"+x).innerHTML;                
-            
+            let ann = document.getElementById("ann"+x).innerHTML;            
+            if (lex.slice(-4) == "<br>") lex = lex.slice(0, -4);
+            if (exp.slice(-4) == "<br>") exp = exp.slice(0, -4);
+            if (trans.slice(-4) == "<br>") trans = trans.slice(0, -4);
+            if (ann.slice(-4) == "<br>") ann = ann.slice(0, -4);            
             copyString += templates["global"].exportClipboard(lex, exp, trans, ann, annString, expString);            
             return x;
         });
