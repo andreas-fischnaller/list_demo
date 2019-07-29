@@ -11,7 +11,7 @@ let templates = {
                     ondrag="this.style.color = 'rgb(64, 64, 64)'; this.style.backgroundColor = 'rgb(246, 246, 246)';"
                     ondragover="allowDrop(event); this.style.backgroundColor = 'rgb(144, 238, 144)';"
                     ondragleave="this.style.backgroundColor = 'rgb(256, 256, 256)';"                    
-                    ondragstart="drag(event, '${search}');" 
+                    ondragstart="drag(event, '${search}#${i}');" 
                     draggable="true"
                     >${x}</a>`;
 
@@ -44,7 +44,7 @@ let templates = {
                         ondrag="this.style.color = 'rgb(64, 64, 64)'; this.style.backgroundColor = 'rgb(246, 246, 246)';"
                         ondragover="allowDrop(event); this.style.backgroundColor = 'rgb(144, 238, 144)';"
                         ondragleave="this.style.backgroundColor = 'rgb(256, 256, 256)';"                    
-                        ondragstart="drag(event, '${search}');" 
+                        ondragstart="drag(event, '${search}#${i}');" 
                         draggable="true"
                         >${x}</a>`;
     
@@ -77,7 +77,7 @@ let templates = {
                         ondrag="this.style.color = 'rgb(64, 64, 64)'; this.style.backgroundColor = 'rgb(246, 246, 246)';"
                         ondragover="allowDrop(event); this.style.backgroundColor = 'rgb(144, 238, 144)';"
                         ondragleave="this.style.backgroundColor = 'rgb(256, 256, 256)';"                    
-                        ondragstart="drag(event, '${search}');" 
+                        ondragstart="drag(event, '${search}#${i}');" 
                         draggable="true"
                         >${x}</a>`;
     
@@ -109,7 +109,7 @@ let templates = {
                         ondrag="this.style.color = 'rgb(64, 64, 64)'; this.style.backgroundColor = 'rgb(246, 246, 246)';"
                         ondragover="allowDrop(event); this.style.backgroundColor = 'rgb(144, 238, 144)';"
                         ondragleave="this.style.backgroundColor = 'rgb(256, 256, 256)';"                    
-                        ondragstart="drag(event, '${search}');" 
+                        ondragstart="drag(event, '${search}#${i}');" 
                         draggable="true"
                         >${x}</a>`;
     
@@ -142,7 +142,7 @@ let templates = {
                         ondrag="this.style.color = 'rgb(64, 64, 64)'; this.style.backgroundColor = 'rgb(246, 246, 246)';"
                         ondragover="allowDrop(event); this.style.backgroundColor = 'rgb(144, 238, 144)';"
                         ondragleave="this.style.backgroundColor = 'rgb(256, 256, 256)';"                    
-                        ondragstart="drag(event, '${search}');" 
+                        ondragstart="drag(event, '${search}#${i}');" 
                         draggable="true"
                         >${x}</a>`;
     
@@ -175,7 +175,7 @@ let templates = {
                     ondrag="this.style.color = 'rgb(64, 64, 64)'; this.style.backgroundColor = 'rgb(246, 246, 246)';"
                     ondragover="allowDrop(event); this.style.backgroundColor = 'rgb(144, 238, 144)';"
                     ondragleave="this.style.backgroundColor = 'rgb(256, 256, 256)';"                    
-                    ondragstart="drag(event, '${search}');" 
+                    ondragstart="drag(event, '${search}#${i}');" 
                     draggable="true"
                     >${x}</a>`;
                     

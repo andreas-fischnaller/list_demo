@@ -166,7 +166,7 @@ function go()
     }
 }
 
-function addWord(word, example, id)
+function addWord(word, example, id, ddPattern)
 {    
     let word2 = "";      
     if (word.split(/ /g).length > 1) 
@@ -181,7 +181,7 @@ function addWord(word, example, id)
         if (y == word || y == word2 && word2 != "") z = `<em class='emp'>${z}</em>`;
         return z;
     });
-    let ddPattern = languages.find(x => x.value === lang).ddPattern;
+    if (!ddPattern) ddPattern = "";
     if (word2 != "") word2 = ddPattern + word2;
     example = example.join(" ");            
     wordlist.style.display = "block";
@@ -340,13 +340,15 @@ function checkLabel(label)
 
 function drop(e, val, example, id)
 {
-    e.preventDefault();
-    let data = e.dataTransfer.getData("text");                
-    let ddPattern = languages.find(x => x.value === lang).ddPattern;    
+    e.preventDefault();    
+    let data = e.dataTransfer.getData("text").split("#");          
+    let ddPattern;
+    if (data[1] > id) ddPattern = languages.find(x => x.value === lang).ddPattern.rtl;    
+    if (data[1] < id) ddPattern = languages.find(x => x.value === lang).ddPattern.ltr;    
     let url = dictionaries[lang].find(x => x.value === dictionary).url;
     let endString = dictionaries[lang].find(x => x.value === dictionary).endString;
     let directInput = dictionaries[lang].find(x => x.value === dictionary).directInput;        
-    addWord(data + ' ' + val, example, id);
+    addWord(data[0] + ddPattern + val, example, id, ddPattern);
     if (directInput == false)
     {
         url = "https://" + new URL(url).hostname;                
@@ -354,7 +356,7 @@ function drop(e, val, example, id)
     }
     else
     {           
-        window.open(`${url}${data}${ddPattern}${val}${endString}`);
+        window.open(`${url}${data[0]}${ddPattern}${val}${endString}`);
     } 
 }
 

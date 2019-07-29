@@ -3,14 +3,20 @@ let languages = [
         "value": "de",
         "name": "German",
         "title": "Deutsch",
-        "ddPattern": "",
+        "ddPattern": {
+            rtl: "",
+            ltr: " "
+        },
         "img": "de.png"
     },
     {
         "value": "da",
         "name": "Danish",
         "title": "Dansk",
-        "ddPattern": " ",
+        "ddPattern": {
+            rtl: " ",
+            ltr: " "
+        },
         "img": "dk.png"
     },
     /*{
@@ -24,28 +30,40 @@ let languages = [
         "value": "fo",
         "name": "Faroese",
         "title": "Føroyskt",
-        "ddPattern": " ",
+        "ddPattern": {
+            rtl: " ",
+            ltr: " "
+        },
         "img": "fo.png"
     },
     {
         "value": "is",
         "name": "Icelandic",
         "title": "Íslenska",
-        "ddPattern": " ",
+        "ddPattern": {
+            rtl: " ",
+            ltr: " "
+        },
         "img": "is.png"
     },
     {
         "value": "no",
         "name": "Norwegian",
         "title": "Norsk",
-        "ddPattern": " ",
+        "ddPattern": {
+            rtl: " ",
+            ltr: " "
+        },
         "img": "no.png"
     },
     {
         "value": "sv",
         "name": "Swedish",
         "title": "Svenska",
-        "ddPattern": " ",
+        "ddPattern": {
+            rtl: " ",
+            ltr: " "
+        },
         "img": "sv.png"
     }
 ]
