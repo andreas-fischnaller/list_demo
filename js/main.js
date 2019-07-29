@@ -90,17 +90,17 @@ function clearTextarea(source)
     {
         let target = document.getElementById(source);                
         target.style.color = "rgb(0, 0, 0)";
-        if (inputStrings.indexOf(target.value) != -1)
+        if (inputStrings.indexOf(target.innerHTML) != -1)
         {
-            target.value = "";                            
+            target.innerHTML = "";                            
         }
     }
 }
 
 function go()
 {
-    let textString = cpText.value; 
-    while (/[ ]/g.test(textString.charAt(textString.length-1)))
+    let textString = cpText.value;     
+    while (/[ |\n]/g.test(textString.charAt(textString.length-1)))
     {
         textString = textString.slice(0, textString.length-1);
     }

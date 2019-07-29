@@ -22,18 +22,10 @@ let templates = {
                 x = `<div class="worditem" id="${itemId}">
                         <span class="backbtn" onclick="document.getElementById('${id}').scrollIntoView();">^</span>
                         <span class="delbtn" onclick="removeWord('${itemId}')">&#10005;</span>
-                        <p>
-                            <textarea id="lex${itemId}" onfocus="clearTextarea(this.id);" class="lex">${word.toLowerCase()}${word2}</textarea>
-                        </p>            
-                        <p contenteditable="true" class="example" id="exp${itemId}">
-                            ${example}
-                        </p>
-                        <p>
-                            <textarea  id="trans${itemId}" onfocus="clearTextarea(this.id);" class="trann">${translation}</textarea>
-                        </p>        
-                        <p>
-                            <textarea id="ann${itemId}" onfocus="clearTextarea(this.id);" class="trann">${annotation}</textarea>
-                        </p>
+                        <p contenteditable="true" id="lex${itemId}" onfocus="clearTextarea(this.id);" class="lex">${word.toLowerCase()}${word2}</p>
+                        <p contenteditable="true" class="example" id="exp${itemId}">${example}</p>
+                        <p contenteditable="true" id="trans${itemId}" onfocus="clearTextarea(this.id);" class="trann">${translation}</p>
+                        <p contenteditable="true"  id="ann${itemId}" onfocus="clearTextarea(this.id);" class="trann">${annotation}</p> 
                     </div> 
                     <br>`;
                 return x;
@@ -63,18 +55,10 @@ let templates = {
                     x = `<div class="worditem" id="${itemId}">
                             <span class="backbtn" onclick="document.getElementById('${id}').scrollIntoView();">^</span>
                             <span class="delbtn" onclick="removeWord('${itemId}')">&#10005;</span>
-                            <p>
-                                <textarea id="lex${itemId}" onfocus="clearTextarea(this.id);" class="lex">${word.toLowerCase()}${word2}</textarea>
-                            </p>            
-                            <p contenteditable="true" class="example" id="exp${itemId}">
-                                ${example}
-                            </p>
-                            <p>
-                                <textarea  id="trans${itemId}" onfocus="clearTextarea(this.id);" class="trann">${translation}</textarea>
-                            </p>        
-                            <p>
-                                <textarea id="ann${itemId}" onfocus="clearTextarea(this.id);" class="trann">${annotation}</textarea>
-                            </p>
+                            <p contenteditable="true" id="lex${itemId}" onfocus="clearTextarea(this.id);" class="lex">${word.toLowerCase()}${word2}</p>
+                            <p contenteditable="true" class="example" id="exp${itemId}">${example}</p>
+                            <p contenteditable="true" id="trans${itemId}" onfocus="clearTextarea(this.id);" class="trann">${translation}</p>
+                            <p contenteditable="true"  id="ann${itemId}" onfocus="clearTextarea(this.id);" class="trann">${annotation}</p> 
                         </div> 
                         <br>`;
                     return x;
@@ -103,18 +87,10 @@ let templates = {
                     x = `<div class="worditem" id="${itemId}">
                             <span class="backbtn" onclick="document.getElementById('${id}').scrollIntoView();">^</span>
                             <span class="delbtn" onclick="removeWord('${itemId}')">&#10005;</span>
-                            <p>
-                                <textarea id="lex${itemId}" onfocus="clearTextarea(this.id);" class="lex">${word.toLowerCase()}${word2}</textarea>
-                            </p>            
-                            <p contenteditable="true" class="example" id="exp${itemId}">
-                                ${example}
-                            </p>
-                            <p>
-                                <textarea  id="trans${itemId}" onfocus="clearTextarea(this.id);" class="trann">${translation}</textarea>
-                            </p>        
-                            <p>
-                                <textarea id="ann${itemId}" onfocus="clearTextarea(this.id);" class="trann">${annotation}</textarea>
-                            </p>
+                            <p contenteditable="true" id="lex${itemId}" onfocus="clearTextarea(this.id);" class="lex">${word.toLowerCase()}${word2}</p>
+                            <p contenteditable="true" class="example" id="exp${itemId}">${example}</p>
+                            <p contenteditable="true" id="trans${itemId}" onfocus="clearTextarea(this.id);" class="trann">${translation}</p>
+                            <p contenteditable="true"  id="ann${itemId}" onfocus="clearTextarea(this.id);" class="trann">${annotation}</p> 
                         </div> 
                         <br>`;
                     return x;
@@ -144,18 +120,10 @@ let templates = {
                     x = `<div class="worditem" id="${itemId}">
                             <span class="backbtn" onclick="document.getElementById('${id}').scrollIntoView();">^</span>
                             <span class="delbtn" onclick="removeWord('${itemId}')">&#10005;</span>
-                            <p>
-                                <textarea id="lex${itemId}" onfocus="clearTextarea(this.id);" class="lex">${word.toLowerCase()}${word2}</textarea>
-                            </p>            
-                            <p contenteditable="true" class="example" id="exp${itemId}">
-                                ${example}
-                            </p>
-                            <p>
-                                <textarea  id="trans${itemId}" onfocus="clearTextarea(this.id);" class="trann">${translation}</textarea>
-                            </p>        
-                            <p>
-                                <textarea id="ann${itemId}" onfocus="clearTextarea(this.id);" class="trann">${annotation}</textarea>
-                            </p>
+                            <p contenteditable="true" id="lex${itemId}" onfocus="clearTextarea(this.id);" class="lex">${word.toLowerCase()}${word2}</p>
+                            <p contenteditable="true" class="example" id="exp${itemId}">${example}</p>
+                            <p contenteditable="true" id="trans${itemId}" onfocus="clearTextarea(this.id);" class="trann">${translation}</p>
+                            <p contenteditable="true"  id="ann${itemId}" onfocus="clearTextarea(this.id);" class="trann">${annotation}</p> 
                         </div> 
                         <br>`;
                     return x;
@@ -185,18 +153,10 @@ let templates = {
                     x = `<div class="worditem" id="${itemId}">
                             <span class="backbtn" onclick="document.getElementById('${id}').scrollIntoView();">^</span>
                             <span class="delbtn" onclick="removeWord('${itemId}')">&#10005;</span>
-                            <p>
-                                <textarea id="lex${itemId}" onfocus="clearTextarea(this.id);" class="lex">${word.toLowerCase()}${word2}</textarea>
-                            </p>            
-                            <p contenteditable="true" class="example" id="exp${itemId}">
-                                ${example}
-                            </p>
-                            <p>
-                                <textarea  id="trans${itemId}" onfocus="clearTextarea(this.id);" class="trann">${translation}</textarea>
-                            </p>        
-                            <p>
-                                <textarea id="ann${itemId}" onfocus="clearTextarea(this.id);" class="trann">${annotation}</textarea>
-                            </p>
+                            <p contenteditable="true" id="lex${itemId}" onfocus="clearTextarea(this.id);" class="lex">${word.toLowerCase()}${word2}</p>
+                            <p contenteditable="true" class="example" id="exp${itemId}">${example}</p>
+                            <p contenteditable="true" id="trans${itemId}" onfocus="clearTextarea(this.id);" class="trann">${translation}</p>
+                            <p contenteditable="true"  id="ann${itemId}" onfocus="clearTextarea(this.id);" class="trann">${annotation}</p>                            
                         </div> 
                         <br>`;
                     return x;
@@ -224,20 +184,12 @@ let templates = {
 
     wordItem: (itemId, word, word2, example, translation, annotation, id) => {
                 x = `<div class="worditem" id="${itemId}">
-                    <span class="backbtn" onclick="document.getElementById('${id}').scrollIntoView();">^</span>
+                        <span class="backbtn" onclick="document.getElementById('${id}').scrollIntoView();">^</span>
                         <span class="delbtn" onclick="removeWord('${itemId}')">&#10005;</span>
-                        <p>
-                            <textarea id="lex${itemId}" onfocus="clearTextarea(this.id);" class="lex">${word}${word2}</textarea>
-                        </p>            
-                        <p contenteditable="true" class="example" id="exp${itemId}">
-                            ${example}
-                        </p>
-                        <p>
-                            <textarea  id="trans${itemId}" onfocus="clearTextarea(this.id);" class="trann">${translation}</textarea>
-                        </p>        
-                        <p>
-                            <textarea id="ann${itemId}" onfocus="clearTextarea(this.id);" class="trann">${annotation}</textarea>
-                        </p>
+                        <p contenteditable="true" id="lex${itemId}" onfocus="clearTextarea(this.id);" class="lex">${word}${word2}</p>
+                        <p contenteditable="true" class="example" id="exp${itemId}">${example}</p>
+                        <p contenteditable="true" id="trans${itemId}" onfocus="clearTextarea(this.id);" class="trann">${translation}</p>
+                        <p contenteditable="true" id="ann${itemId}" onfocus="clearTextarea(this.id);" class="trann">${annotation}</p>
                     </div> 
                     <br>`;
                 return x;
