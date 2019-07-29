@@ -9,6 +9,20 @@ let dictionary = "";
 
 let forceInput = false;
 
+document.body.addEventListener("keydown", function(e) 
+{
+    e = e || window.event;
+    var key = e.which || e.keyCode; 
+    var ctrl = e.ctrlKey ? e.ctrlKey : ((key === 17) ? true : false); 
+
+    if ( key == 67 && ctrl ) 
+    {        
+        if (wordlist.style.display == "block") downloadList("copy"); 
+    }
+
+},
+false);
+
 /* Check if language is set */
 let lang = new URLSearchParams(document.location.search.substring(1)).get("lang");        
 if (lang == null) 
@@ -271,10 +285,10 @@ function downloadList(type, print)
     {
         copyString = templates["global"].exportHTMLStart(exportFilename);
         ids.map((x) => {                
-            let lex = document.getElementById("lex"+x).value;
+            let lex = document.getElementById("lex"+x).innerHTML;
             let exp = document.getElementById("exp"+x).innerHTML.replace(/[\n\t\r]| {2}|/g, "");
-            let trans = document.getElementById("trans"+x).value;
-            let ann = document.getElementById("ann"+x).value;
+            let trans = document.getElementById("trans"+x).innerHTML;
+            let ann = document.getElementById("ann"+x).innerHTML;
             copyString += templates["global"].exportHTML(lex, exp, trans, ann);                    
             return x;
         });
@@ -295,10 +309,10 @@ function downloadList(type, print)
 
         copyString = templates["global"].exportJSONStart(JSONArrayName);
         ids.map((x) => {                
-            let lex = document.getElementById("lex"+x).value;
+            let lex = document.getElementById("lex"+x).innerHTML;
             let exp = document.getElementById("exp"+x).innerHTML.replace(/[\n\t\r]| {2}| class=\"emp\"/g, "");
-            let trans = document.getElementById("trans"+x).value;
-            let ann = document.getElementById("ann"+x).value;
+            let trans = document.getElementById("trans"+x).innerHTML;
+            let ann = document.getElementById("ann"+x).innerHTML;
             copyString += templates["global"].exportJSON(lex, exp, trans, ann);
             return x; 
         });
@@ -310,10 +324,10 @@ function downloadList(type, print)
         let annString = checkLabel(labels[lang].annotation);
         let expString = checkLabel(labels[lang].example);
         ids.map((x) => {                
-            let lex = document.getElementById("lex"+x).value;
+            let lex = document.getElementById("lex"+x).innerHTML;
             let exp = document.getElementById("exp"+x).innerHTML.replace(/[\n\t\r]| {2}|<em class=\"emp\">|<\/em>/g, "");
-            let trans = document.getElementById("trans"+x).value;
-            let ann = document.getElementById("ann"+x).value;                
+            let trans = document.getElementById("trans"+x).innerHTML;
+            let ann = document.getElementById("ann"+x).innerHTML;                
             
             copyString += templates["global"].exportClipboard(lex, exp, trans, ann, annString, expString);            
             return x;
