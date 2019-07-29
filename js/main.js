@@ -114,7 +114,7 @@ function go()
         url = "https://" + new URL(url).hostname;                
         endString = "";
     }
-    textString = textString.replace(/\n/g, " <br>");
+    textString = textString.replace(/\n/g, " <br>").replace(/\"/gi, "&quot;").replace(/\'/gi, "&apos;");
     let words = textString.split(" ");
     let searchString;
     let example = "";
@@ -127,15 +127,15 @@ function go()
         {
             i_max++;
         }
-        i_max += 1;      
-        example = words.slice(i_min, i_max).join(" ");                
+        i_max += 1;        
+        example = words.slice(i_min, i_max).join(" ");                                
         if (x.search(/([\.\:\!\?])/g) != -1)
         {
             i_min = i+1;            
-        }  
-        let search = x.replace(/\<br\>|[\.\,\-\_\:\;\!\?\\\'\"\§\$\%\&\/\(\)\[\]\{\}\*\´\`\~\<\>\#]|[0-9]/gi, "");                
+        }          
+        let search = x.replace(/\&quot\;|\&apos\;|\<br\>|[\.\,\-\_\:\;\!\?\\\'\"\§\$\%\&\/\(\)\[\]\{\}\*\´\`\~\<\>\#]|[0-9]/gi, "");                
         if (directInput == false) searchString = "";
-        else searchString = search;        
+        else searchString = search;                
         x = templates[lang].linkFormat(x, search, searchString, url, endString, example, i);
         return x;        
     });
@@ -202,9 +202,9 @@ function addWord(word, example, id)
         document.getElementById("lex"+itemId).select();
         document.execCommand("copy");            
     }
-    // Islex-fix:
+    // Islex-fix:    
     if (dictionary == "islex" && directInput == true)
-    {
+    {        
         document.getElementById("searchString").value = word;
         document.getElementById("form").submit();
         document.getElementById(id).setAttribute("target", "");
