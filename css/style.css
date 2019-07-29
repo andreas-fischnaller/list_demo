@@ -68,10 +68,13 @@ label:active
 
 .worditem
 {
+    position: relative;
     margin: 0;
     padding: 0;
     border: 1px rgb(128, 128, 128) solid;
+    background-color: rgb(255, 255, 255);
     box-shadow: 0 0.1em 0.2em 0 rgba(0, 0, 0, 0.1);
+    z-index: 3;
 }
 
 .cp_text
@@ -195,10 +198,12 @@ label:active
 
 #wordlist
 {
+    position: relative;
     display: none;    
     font-size: 200%;
     padding: 1%;
     width: 98%;
+    z-index: 3;    
 }
 
 #wordlist_menu
@@ -261,4 +266,18 @@ label:active
 {
     margin-top: 1%;
     line-height: 1.5;
+}
+
+#overlay
+{
+    position: fixed;
+    display: none;
+    width: 100%; 
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;    
+    background-color: rgba(0,0,0,0.75); 
+    z-index: 2;    
 }

@@ -7,6 +7,8 @@ let wordlistMenu = document.getElementById("wordlist_menu");
 let languageSelect = document.getElementById("language_select");
 let dictionary = "";
 
+let forceInput = false;
+
 /* Check if language is set */
 let lang = new URLSearchParams(document.location.search.substring(1)).get("lang");        
 if (lang == null) 
@@ -189,8 +191,8 @@ function addWord(word, example, id)
     {
         itemId = Math.random().toString(36).substr(2, 7);
     }
-    let translation =  checkLabel(labels[lang].translation);
-    let annotation = checkLabel(labels[lang].annotation);
+    let translation = checkLabel(labels[lang].translation);
+    let annotation = checkLabel(labels[lang].annotation);    
     let wordItem = document.createElement("div");
     wordItem.setAttribute("id", itemId);    
     wordItem.innerHTML = templates[lang].wordItem(itemId, word, word2, example, translation, annotation, id);            
@@ -210,9 +212,14 @@ function addWord(word, example, id)
         document.getElementById(id).setAttribute("target", "");
         document.getElementById(id).setAttribute("href", "#");
     }
+    if (forceInput == true)
+    {
+        document.getElementsByTagName("body")[0].setAttribute("style", "overflow:hidden;");
+        document.getElementById("overlay").setAttribute("style", "display: block;")
+    }
 }
 
-function removeWord(word)
+function removeWord(word, i)
 {            
     let id = document.getElementById(word);
     id.parentNode.removeChild(id);
@@ -220,6 +227,31 @@ function removeWord(word)
     {
         wordlist.style.display = "none";
         wordlistMenu.style.display = "none";
+    }
+    if (forceInput == true)
+    {
+        document.getElementsByTagName("body")[0].setAttribute("style", "overflow:none;");    
+        document.getElementById("overlay").setAttribute("style", "display: none;")
+    }
+    document.getElementById(i).scrollIntoView();
+}
+
+function checkInput(id, i)
+{
+    if (forceInput == true)
+    {
+        let translation = checkLabel(labels[lang].translation);    
+        let input = document.getElementById(id).innerHTML;
+        if (input !== translation && input !== "")
+        {
+        document.getElementsByTagName("body")[0].setAttribute("style", "overflow:none;");    
+        document.getElementById("overlay").setAttribute("style", "display: none;")
+        document.getElementById(i).scrollIntoView();
+        }
+    }
+    else
+    {
+        document.getElementById(i).scrollIntoView();
     }
 }
 
