@@ -215,7 +215,8 @@ function addWord(word, example, id, ddPattern)
     let directInput = dictionaries[lang].find(x => x.value === dictionary).directInput;
     if (directInput == false)
     {
-        document.getElementById("lex"+itemId).select();
+        document.getElementById("lex"+itemId).focus();        
+        document.execCommand("selectAll", false, null);
         document.execCommand("copy");            
     }
     // Islex-fix:    
