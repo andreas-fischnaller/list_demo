@@ -51,8 +51,7 @@ label:active
     border: 0px solid rgb(128, 128, 128);    
     box-shadow: 0 0.1em 0.2em 0 rgba(0, 0, 0, 0.5);
     border-radius: 0.25em;
-    padding-left: 0.25em;    
-    padding-right: 0.25em;    
+    padding: 0.25em;    
 }
 
 .btn:hover
@@ -184,23 +183,20 @@ label:active
     height: 100%;
     margin: 0;
     padding: 1%;
-    text-align: center;    
-    font-size: 200%;
+    text-align: center;        
 }
 
 #output
 {
     display: none;    
     margin: 0;
-    padding: 1%;        
-    font-size: 200%;
+    padding: 1%;            
 }
 
 #wordlist
 {
     position: relative;
-    display: none;    
-    font-size: 200%;
+    display: none;        
     padding: 1%;
     width: 98%;
     z-index: 3;    
@@ -210,8 +206,7 @@ label:active
 {
     display: none;
     padding-bottom:2%;    
-    text-align: center; 
-    font-size: 200%;
+    text-align: center;     
     width: 100%;
 }
 
@@ -230,8 +225,7 @@ label:active
 }
 
 #languages
-{    
-    font-size: 200%;
+{   
     position: absolute;
     top: 50%;
     left: 50%;            
