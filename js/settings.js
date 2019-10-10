@@ -1,6 +1,6 @@
 function settings()
 {        
-    let children = document.body.children;
+    let children = document.getElementsByTagName("*");
 
     let icon = document.createElement("div");        
     icon.style.position = "fixed";
@@ -93,7 +93,7 @@ function settings()
         for (i=0; i<children.length; i++)
         {
             children[i].style.lineHeight = e.target.value;
-            if (children[i].className == "btn" || children[i].className == "button" ) children[i].style.lineHeight = "100%";
+            if (children[i].className == "btn" || children[i].className == "button" ) children[i].style.lineHeight = "initial";
         }        
     });
 
