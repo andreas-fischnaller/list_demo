@@ -116,7 +116,7 @@ function settings()
         for (i=0; i<children.length; i++)
         {
             children[i].style.lineHeight = e.target.value;
-            if (children[i].className == "btn" || children[i].className == "button" ) children[i].style.lineHeight = "initial";
+            if (children[i].tagName == "BUTTON" || (children[i].tagName == "INPUT" && children[i].type != "text") || children[i].className == "btn" || children[i].className == "button") children[i].style.lineHeight = "initial";                
         }        
     });
 
@@ -125,6 +125,6 @@ function settings()
     overlay.appendChild(menuContainer);        
     menuContainer.appendChild(fontFamilySelect);        
     menuContainer.appendChild(fontSizeSelect);        
-    menuContainer.appendChild(lineHeightSelect);
+    menuContainer.appendChild(lineHeightSelect);            
 }
 settings();
