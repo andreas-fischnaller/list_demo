@@ -1,6 +1,6 @@
 function settings()
-{
-    let textAreas = document.getElementsByTagName("textarea");
+{        
+    let children = document.body.children;
 
     let icon = document.createElement("div");        
     icon.style.position = "fixed";
@@ -55,9 +55,9 @@ function settings()
     }                
     fontFamilySelect.addEventListener("change", (e) => {            
         document.body.style.fontFamily = e.target.value;
-        for (i=0; i<textAreas.length; i++)
+        for (i=0; i<children.length; i++)
         {
-            textAreas[i].style.fontFamily = e.target.value;
+            children[i].style.fontFamily = e.target.value;
         }
     })
 
@@ -72,9 +72,9 @@ function settings()
     }
     fontSizeSelect.addEventListener("change", (e) => {
         document.body.style.fontSize = e.target.value;
-        for (i=0; i<textAreas.length; i++)
+        for (i=0; i<children.length; i++)
         {
-            textAreas[i].style.fontSize = e.target.value;
+            children[i].style.fontSize = e.target.value;
         }
     });
 
@@ -89,11 +89,12 @@ function settings()
         lineHeightPercent += 25;
     }
     lineHeightSelect.addEventListener("change", (e) => {
-        document.body.style.lineHeight = e.target.value;   
-        for (i=0; i<textAreas.length; i++)
+        document.body.style.lineHeight = e.target.value;
+        for (i=0; i<children.length; i++)
         {
-            textAreas[i].style.lineHeight = e.target.value;
-        }         
+            children[i].style.lineHeight = e.target.value;
+            if (children[i].className == "btn" || children[i].className == "button" ) children[i].style.lineHeight = "100%";
+        }        
     });
 
     document.body.appendChild(icon);
@@ -101,8 +102,6 @@ function settings()
     overlay.appendChild(menuContainer);
     menuContainer.appendChild(fontFamilySelect);
     menuContainer.appendChild(fontSizeSelect);
-    menuContainer.appendChild(lineHeightSelect);
-
-    console.log(textAreas);
+    menuContainer.appendChild(lineHeightSelect);        
 }
 settings();
