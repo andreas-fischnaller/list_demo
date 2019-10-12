@@ -4,13 +4,13 @@ function settings()
 
     let icon = document.createElement("div");        
     icon.style.position = "fixed";
-    icon.style.right = "0.25%";
-    icon.style.top = "0.5%";
+    icon.style.right = "0.5%";
+    icon.style.top = "0.25%";
     icon.style.textAlign = "right";
     icon.style.zIndex = "1000";        
-    icon.style.fontSize = "12pt";
+    icon.style.fontSize = "20px";
     icon.style.cursor = "pointer";
-    icon.innerHTML = "&#x1f527;"
+    icon.innerHTML = "&#x2630;"
     icon.addEventListener("click", (e) => {
         if (overlay.style.display == "none") overlay.style.display = "block";
         else overlay.style.display = "none";
