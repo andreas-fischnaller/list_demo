@@ -76,7 +76,7 @@ let dictionaries= {
         {
             "name": "Islex",
             "value": "islex",
-            "url": "http://islex.hi.is/",
+            "url": "https://islex.arnastofnun.is/is/leit/",
             "endString": "",
             "directInput": true,
             "standard": true

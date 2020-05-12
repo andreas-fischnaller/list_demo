@@ -149,35 +149,16 @@ function go()
         {
             i_min = i+1;            
         }          
-        let search = x.replace(/\&quot\;|\&apos\;|\<br\>|[\.\,\-\_\:\;\!\?\\\'\"\§\$\%\&\/\(\)\[\]\{\}\*\´\`\~\<\>\#]|[0-9]/gi, "");                
+        let search = x.replace(/\&quot\;|\&apos\;|\<br\>|[\.\,\-\_\:\;\!\?\\\'\"\§\$\%\&\/\(\)\[\]\{\}\*\´\`\~\<\>\#]|[0-9]/gi, "");                        
         if (directInput == false) searchString = "";
-        else searchString = search;                
+        else searchString = search.replace(/\u00AD/, "");
         x = templates[lang].linkFormat(x, search, searchString, url, endString, example, i);
         return x;        
     });
     annText = links.join(" ");
     textbox.style.display = "none";
     output.style.display = "block";
-    output.innerHTML = annText;     
-    // Islex-fix:
-    if (dictionary == "islex" && directInput == true)                   
-    {
-        let form = document.createElement("form");
-        form.setAttribute("method", "POST");
-        form.setAttribute("action", "http://islex.is/islex#lleit");
-        form.setAttribute("id", "form");
-        form.setAttribute("target", "_blank");
-        form.innerHTML = `
-                        <input type="hidden" name="finna" value="1">
-                        <input type="hidden" name="dict" value="A">
-                        <input type="hidden" name="erflokin" value="0">
-                        <input type="hidden" name="nlo" value="1">
-                        <input type="hidden" name="nlj" value="1">
-                        <input type="hidden" name="fuzz" value="1">
-                        <input type="hidden" name="samleit" value="" id="searchString">
-        `;
-        document.body.appendChild(form);
-    }
+    output.innerHTML = annText;  
 }
 
 function addWord(word, example, id, ddPattern)
@@ -218,14 +199,6 @@ function addWord(word, example, id, ddPattern)
         document.getElementById("lex"+itemId).focus();        
         document.execCommand("selectAll", false, null);
         document.execCommand("copy");            
-    }
-    // Islex-fix:    
-    if (dictionary == "islex" && directInput == true)
-    {        
-        document.getElementById("searchString").value = word;
-        document.getElementById("form").submit();
-        document.getElementById(id).setAttribute("target", "");
-        document.getElementById(id).setAttribute("href", "#");
     }
     if (forceInput == true)
     {
